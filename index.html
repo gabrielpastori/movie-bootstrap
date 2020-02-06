@@ -2,15 +2,32 @@
 
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
-            <div class="text-center">
-                <h1 class="h1">My Favorite Movies</h1>
-                <button class="btn btn-primary p-2">Click</button>
+            <div class="row">
+                <div class="col mt-4">
+                    <h1 class="h1 text-primary text-center" id="title">My Favorite Movies</h1>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-start">
+                <div class="col">
+                    <label>Title</label>
+                    <input type="text" value="Movie Title">
+                </div>
+                <div class="col">
+                    <label>Rating</label>
+                    <input type="value" value="Rate the movie(0-10)">
+                </div>
+                <div class="col">
+                    <button>Add Movie</button>
+                </div>
             </div>
         </div>
+        
     </body>
 </html>
