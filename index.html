@@ -2,9 +2,12 @@
 
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Source+Code+Pro&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <div class="container">
@@ -14,20 +17,61 @@
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-start">
-                <div class="col">
-                    <label>Title</label>
-                    <input type="text" value="Movie Title">
+            <form class="row mt-3 text-center align-items-center justify-content-center ">
+                <div class="col-xl-1">
+                    <label class="" for="movieTitle">Title</label>
                 </div>
-                <div class="col">
-                    <label>Rating</label>
-                    <input type="value" value="Rate the movie(0-10)">
+                <div class="col-xl-3">
+                    <input type="text" class="form-control" placeholder="Movie Title" id="movieTitle">
                 </div>
-                <div class="col">
-                    <button>Add Movie</button>
+                <div class="col-xl-1">
+                    <label class="" for="rate">Rating</label>
                 </div>
-            </div>
+                <div class="col-xl-3">
+                    <input type="value" class="form-control" placeholder="Rate the movie (0-10)" id="rate">
+                </div>
+                <div class="col-xl-2 col-10 mt-xl-0 mt-3">
+                    <button class="btn btn-primary btn-block" id="add">Add Movie</button>
+                </div>
+            </form>
+            <table class="table table-striped table-bordered table-dark  mt-3 text-center" id="movieTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Rating</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="align-middle">InterestelarA</td>
+                        <td class="align-middle">10</td>
+                        <td class="align-middle"><button class="btn btn-danger btn-block delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">InterestelarB</td>
+                        <td class="align-middle">8</td>
+                        <td class="align-middle"><button class="btn btn-danger btn-block delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">InterestelarC</td>
+                        <td class="align-middle">7</td>
+                        <td class="align-middle"><button class="btn btn-danger btn-block delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                            <td class="align-middle">InterestelarD</td>
+                            <td class="align-middle">11</td>
+                            <td class="align-middle"><button class="btn btn-danger btn-block delete">Delete</button></td>
+                        </tr>
+                </tbody>
+            </table>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
