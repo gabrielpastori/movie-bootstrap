@@ -1,14 +1,21 @@
 $(document).ready(function() {
 
-    
     var table=$('#movieTable').DataTable({
         "paging":false,
         "searching":false,
         "info":false,
         "columnDefs": [
             { "orderable": false, "targets": 2 }
-        ]
+        ],
+        "bStateSave": true,
+        "fnStateSave": function (oSettings, oData) {
+            localStorage.setItem( 'DataTables', JSON.stringify(oData) );
+        },
+        "fnStateLoad": function (oSettings) {
+            return JSON.parse( localStorage.getItem('DataTables') );
+        }
     });
+    
     $("#add").on("click",function(e){
         
         e.preventDefault();
