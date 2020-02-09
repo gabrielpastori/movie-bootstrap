@@ -22,7 +22,7 @@ table.dataTable tbody th, table.dataTable tbody td {
     padding: 12px 12px; /* e.g. change 8x to 4px here */
 }
 @media only screen and (max-device-width: 680px) {
-    input::placeholder {
+    input::placeholder,input[type='text'],input[type='value'] {
         font-size: 35px;
     }
 }
